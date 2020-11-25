@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.CoursesActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/toolbar_with_search"
+            android:id="@+id/toolbar" />
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            app:SpinKit_Color="@color/textColorGrey"
+            android:visibility="gone"
+            android:elevation="200dp"
+            style="@style/SpinKitView.Circle"/>
+
+        <!--This textview and the recycler view is responsible for filtered course section-->
+        <TextView
+            android:id="@+id/filterResultTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Showing 450 Courses"
+            android:layout_below="@+id/toolbar"
+            style="@style/headerTitleLabel"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewForFilteredCourses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/filterResultTitle"
+            android:layout_above="@+id/bottomNavigationView"
+            android:paddingHorizontal="14dp"
+            android:clipToPadding="false"
+            android:layout_marginTop="10dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <!--This is the floating filter button-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingFilterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="25dp"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="#273647"
+            android:elevation="6dp"
+            app:fabSize="normal"
+            app:borderWidth="0dp"
+            android:src="@drawable/filter"
+            android:onClick="handleFilterButton" />
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FEFFFF"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight = "0dp">
+        <include layout="@layout/course_filter_page" />
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

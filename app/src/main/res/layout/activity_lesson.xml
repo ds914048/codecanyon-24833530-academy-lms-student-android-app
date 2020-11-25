@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.CoursesActivity">
+    <ImageButton
+        android:id="@+id/backToMyCoursesList"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/arrow_left"
+        android:scaleType="matrix"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp"
+        android:background="@android:color/transparent"
+        android:onClick="handleBackButton"/>
+    <com.github.ybq.android.spinkit.SpinKitView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        app:SpinKit_Color="@color/textColorGrey"
+        android:visibility="gone"
+        android:elevation="200dp"
+        style="@style/SpinKitView.Circle"/>
+
+    <RelativeLayout
+        android:id="@+id/lessonPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="#000">
+
+        <!-- HTML5 Video Playe Starts -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+            <VideoView
+                android:id="@+id/html5Player"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"/>
+            <ImageButton
+                android:id="@+id/fullScreenLesson"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_full_screen"
+                android:scaleType="fitCenter"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/lessonPlayer"
+                android:layout_gravity="top|right"/>
+        </FrameLayout>
+        <!-- HTML5 Video Playe Ends -->
+
+        <!-- YouTube Video Playe Starts -->
+        <view
+            android:id="@+id/youtubePlayer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            class="com.google.android.youtube.player.YouTubePlayerView"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"/>
+        <!-- YouTube Video Playe Ends -->
+
+        <!-- Vimeo Webview Video Playe Starts -->
+        <WebView
+            android:id="@+id/videoPlayerWebView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="@color/textColorBlack">
+        </WebView>
+        <!-- Vimeo Webview Video Playe Ends -->
+
+        <ImageView
+            android:id="@+id/emptyVideoScreen"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/video_not_found"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/loadingVideoPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            app:SpinKit_Color="@color/white"
+            android:elevation="200dp"
+            style="@style/SpinKitView.Wave"
+            android:visibility="gone"/>
+
+        <!--Download attachment view starts from here-->
+        <RelativeLayout
+            android:id="@+id/downloadAttachmentArea"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="@color/nonVideoLessonBG">
+            <TextView
+                android:id="@+id/attachmentTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@id/downloadAttachmentButton"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/google_sans_medium"
+                android:textSize="19dp"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Download the Latest Bootstrap File"
+                android:visibility="gone"/>
+            <Button
+                android:id="@+id/downloadAttachmentButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Download Attachment"
+                android:background="@drawable/rounded_custom_blue_button"
+                android:textColor="@color/white"
+                android:fontFamily="@font/google_sans_bold"
+                android:textAllCaps="false"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="40dp"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/icon_download"
+                android:drawablePadding="10dp"/>
+        </RelativeLayout>
+        <!--Download attachment view ends from here-->
+
+        <!--Quiz web view starts from here-->
+        <RelativeLayout
+            android:id="@+id/quizStuffs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/nonVideoLessonBG"
+            android:layout_centerInParent="true"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/quizTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fundamental Of Bootstrap"
+                android:fontFamily="@font/google_sans_bold"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:padding="15dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/white"
+                android:visibility="gone"/>
+            <Button
+                android:id="@+id/startQuiz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/quizTitle"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/rounded_custom_blue_button"
+                android:textColor="@color/white"
+                android:fontFamily="@font/google_sans_bold"
+                android:text="Start Quiz"
+                android:capitalize="words"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="45dp"
+                android:layout_marginTop="15dp"
+                android:drawableRight="@drawable/long_arrow_right"
+                android:drawablePadding="10dp"
+                android:textAllCaps="false"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <!--Quiz web view ends from here-->
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/courseTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lessonPlayer"
+        android:text="How to Make Super Cool Application With Flatter. Its awesome and its free. How to Make Super Cool Application With Flatter. Its awesome and its free"
+        android:textSize="22dp"
+        android:fontFamily="@font/google_sans_regular"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/textColorBlack"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:ellipsize="end"/>
+
+    <Spinner
+        android:id="@+id/moreButton"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/courseTitle"
+        android:layout_marginTop="-3dp"
+        style="@style/moreButton"/>
+
+    <ProgressBar
+        android:id="@+id/courseCompletionProgressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/courseTitle"
+        android:layout_marginHorizontal="10dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="42"
+        android:progressDrawable="@drawable/custom_progress_bar"
+        android:theme="@style/progressBarSkyBlue"
+        android:layout_marginTop="0dp"
+        android:layout_toLeftOf="@id/moreButton"/>
+
+    <TextView
+        android:id="@+id/courseCompletionNumberOutOfTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/courseCompletionProgressBar"
+        android:text="10/26 lessons completed"
+        android:textSize="15dp"
+        android:fontFamily="@font/google_sans_regular"
+        android:layout_marginHorizontal="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sectionRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/courseCompletionNumberOutOfTotal"
+        android:layout_marginTop="10dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>

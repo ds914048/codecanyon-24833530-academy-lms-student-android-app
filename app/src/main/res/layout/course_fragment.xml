@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        app:SpinKit_Color="@color/textColorGrey"
+        android:visibility="gone"
+        android:elevation="200dp"
+        style="@style/SpinKitView.Circle"/>
+
+
+    <ScrollView
+        android:id="@+id/homePageScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/homePageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--This textview and the recycler view is responsible for top course section-->
+            <TextView
+                android:id="@+id/topCourseLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Top Course"
+                android:layout_below="@+id/toolbar"
+                style="@style/headerTitleLabel" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar"
+                android:text="All Courses >"
+                android:layout_marginTop="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/skyBlue"
+                android:fontFamily="@font/google_sans_regular"
+                android:onClick="viewAllCourses"
+                android:background="?attr/selectableItemBackground"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewForTopCourses"
+                android:layout_width="wrap_content"
+                android:layout_height="240dp"
+                android:layout_below="@+id/topCourseLabel"
+                android:paddingHorizontal="12dp"
+                android:clipToPadding="false">
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <!--This textview and recycler view is responsible for Categories section-->
+            <TextView
+                android:id="@+id/categoriesLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Categories"
+                android:layout_below="@+id/recyclerViewForTopCourses"
+                style="@style/headerTitleLabel"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recyclerViewForTopCourses"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="10dp"
+                android:background="?attr/selectableItemBackground"
+                android:fontFamily="@font/google_sans_regular"
+                android:onClick="viewAllCourses"
+                android:text="All Courses >"
+                android:textColor="@color/skyBlue" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewForCategories"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/categoriesLabel"
+                android:nestedScrollingEnabled="false"
+                android:paddingHorizontal="14dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/myCourseView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.github.ybq.android.spinkit.SpinKitView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            app:SpinKit_Color="@color/textColorGrey"
+            android:visibility="gone"
+            android:elevation="200dp"
+            style="@style/SpinKitView.Circle"/>
+
+        <!--This textview and the recycler view is responsible for top course section-->
+        <TextView
+            android:id="@+id/myCoursesLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Courses"
+            android:layout_below="@+id/toolbar"
+            style="@style/headerTitleLabel" />
+
+        <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/myCoursesGridLayout"
+            android:layout_below="@id/myCoursesLabel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="2"
+            android:verticalSpacing="10dp"
+            android:horizontalSpacing="10dp"
+            android:scrollbarStyle="outsideOverlay"
+            android:verticalScrollbarPosition="right"
+            android:scrollbars="vertical">
+        </GridView>
+    </RelativeLayout>
+
+    <include layout="@layout/signin_placeholder" />
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/signInPlaceHolder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone">
+    <Button
+        android:id="@+id/signInButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_custom_blue_button"
+        android:layout_marginHorizontal="25dp"
+        android:text="Sign In"
+        android:textColor="@color/white"
+        android:fontFamily="@font/google_sans_bold"
+        android:textSize="16dp"
+        android:layout_below="@id/errorBot"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"/>
+    <ImageView
+        android:id="@+id/errorBot"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/do_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

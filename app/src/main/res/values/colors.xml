@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="white">#ffffff</color>
+    <color name="darkNavyBlue">#2D4053</color>
+    <color name="skyBlue">#2D8DD6</color>
+    <color name="lightSkyBlue">#37ABEC</color>
+    <color name="grey">#B3BCC1</color>
+    <color name="lightGrey">#dedfe0</color>
+
+    <color name="textColorBlack">#253241</color>
+    <color name="textColorGrey">#819595</color>
+    <color name="golden">#FFC107</color>
+    <color name="signInBlue">#6277FB</color>
+
+    <color name="bottomNavigationCheckedState">#34495E</color>
+    <color name="bottomNavigationPressedState">#34495E</color>
+    <color name="bottomNavigationEnabledState">#34495E</color>
+    <color name="bottomNavigationIdealState">#95A5A6</color>
+
+
+    <color name="nonVideoLessonBG">#273647</color>
+    <color name="loginViewText">#B8C2E7</color>
+
+</resources>

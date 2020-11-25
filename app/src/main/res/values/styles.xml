@@ -1,0 +1,121 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#6C6C6C</item>
+        <item name="colorPrimaryDark">@color/grey</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!--Change status bar color with status bar notification icon-->
+        <item name="android:statusBarColor">@android:color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!--Overriding all the font to Google Sans Light Font-->
+        <item name="android:textViewStyle">@style/googleSansLightFont</item>
+    </style>
+
+    <!--Style for all the Header or Title label-->
+    <style name="headerTitleLabel" parent="android:Widget.TextView">
+        <item name="android:textColor">#202E3E</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:fontFamily">@font/google_sans_medium</item>
+    </style>
+
+    <!--Filter parameters label's styles-->
+    <style name="filterParameteresLabel" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/textColorGrey</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:fontFamily">@font/google_sans_regular</item>
+    </style>
+
+    <!--Filter parameter's spinner styles-->
+    <style name="filterSpinner" parent="android:Widget.TextView">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:fontFamily">@font/google_sans_regular</item>
+        <item name="android:textSize">25dp</item>
+    </style>
+
+    <!--Dark Navy Blue Color Button with corner radius-->
+    <style name="darkNavyBlueButton" parent="android:Widget.Button">
+        <item name="android:background">@drawable/rounded_navy_blue_button</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+
+    <!--Sky blue button with corner radius-->
+    <style name="skyBlueButton" parent="android:Widget.Button">
+        <item name="android:background">@drawable/rounded_sky_blue_button</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+
+
+    <!--Text field Underline color-->
+    <style name="customizedTextField">
+        <item name="colorControlNormal">@color/textColorBlack</item>
+        <item name="colorControlActivated">@color/textColorGrey</item>
+    </style>
+
+    <!--Changing font of bottom navigation menu bar-->
+    <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+        <item name="fontFamily">@font/google_sans_regular</item>
+    </style>
+
+
+    <!--Initializing Google Sans Light Font-->
+    <style name="googleSansLightFont" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/google_sans_light</item>
+    </style>
+
+    <!--Initializing Google Sans Thin Font-->
+    <style name="googleSansThinFont" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/google_sans_thin</item>
+    </style>
+
+    <!--Initializing Google Sans Medium Font-->
+    <style name="googleSansMediumFont" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/google_sans_medium</item>
+    </style>
+
+    <!--Initializing Google Sans Bold Font-->
+    <style name="googleSansBoldFont" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/google_sans_bold</item>
+    </style>
+
+    <!--Initializing Google Sans Regular Font-->
+    <style name="googleSansRegularFont" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/google_sans_regular</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.PopUp">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+
+    <style name="progressBarSkyBlue" parent="@style/Theme.AppCompat">
+        <item name="colorAccent">@color/skyBlue</item>
+    </style>
+
+    <style name="tabFont" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textSize">16dp</item>
+        <item name="android:fontFamily">@font/google_sans_medium</item>
+    </style>
+
+    <style name="moreButton" parent="@android:style/Widget.Spinner">
+        <item name="android:background">@drawable/more_icon</item>
+    </style>
+    <style name="horizontalMoreButton" parent="@android:style/Widget.Spinner">
+        <item name="android:background">@drawable/icon_more_horizontal</item>
+    </style>
+</resources>

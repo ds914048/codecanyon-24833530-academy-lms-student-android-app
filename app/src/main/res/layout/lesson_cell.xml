@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="25dp">
+        <TextView
+            android:id="@+id/serialNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColorGrey"
+            android:textSize="15dp"
+            android:textFontWeight="200"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/lessonCompletionCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:buttonTint="@color/skyBlue"/>
+        <LinearLayout
+            android:id="@+id/lessonDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/serialNumber"
+            android:layout_toLeftOf="@id/lessonCompletionCheckbox"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="10dp">
+            <TextView
+                android:id="@+id/lessonTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lesson"
+                android:textColor="@color/textColorBlack"
+                android:textSize="15dp"
+                android:fontFamily="@font/google_sans_bold"
+                android:maxLines="2"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/lessonDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6 min"
+                android:textColor="@color/textColorGrey"
+                android:textSize="11dp"
+                android:textFontWeight="200"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/lightGrey"
+    />
+</RelativeLayout>

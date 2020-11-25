@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/courseCardViewList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="5dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="3dp"
+        app:cardBackgroundColor="#FEFFFF"
+        android:layout_below="@+id/filterResultTitle">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/courseThumbnail"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_alignParentLeft="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_toRightOf="@id/courseThumbnail"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_centerInParent="true">
+                <TextView
+                    android:id="@+id/courseTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem Ipsum Dolor Emmet Emmet Emmet"
+                    android:layout_toRightOf="@id/categoryImageView"
+                    android:layout_toLeftOf="@id/goToCategoryWiseCourseList"
+                    android:textColor="@color/textColorBlack"
+                    android:textSize="17dp"
+                    android:fontFamily="@font/google_sans_regular"
+                    android:maxLines="1"/>
+
+                <TextView
+                    android:id="@+id/instructorName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="John Doe"
+                    android:layout_below="@id/categoryName"
+                    android:layout_toRightOf="@id/categoryImageView"
+                    android:textColor="@color/textColorGrey"
+                    android:textSize="12dp"
+                    android:textFontWeight="200"
+                    android:layout_marginTop="4dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <RatingBar
+                        android:id="@+id/starRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:numStars="5"
+                        android:stepSize="1.0"
+                        android:isIndicator="true"
+                        android:rating="4"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="4dp"
+                        android:progressTint="@color/golden" />
+
+                    <TextView
+                        android:id="@+id/numericRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.0"
+                        android:layout_toRightOf="@id/starRating"
+                        android:textColor="@color/textColorBlack"
+                        android:textSize="13dp"
+                        android:textFontWeight="200"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/google_sans_regular"/>
+
+                    <TextView
+                        android:id="@+id/totalNumberOfRatingByUsers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(196)"
+                        android:layout_toRightOf="@id/numericRating"
+                        android:textColor="@color/grey"
+                        android:textSize="13dp"
+                        android:textFontWeight="200"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="4dp"/>
+
+                    <TextView
+                        android:id="@+id/coursePrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$20"
+                        android:textColor="@color/textColorBlack"
+                        android:textSize="17dp"
+                        android:fontFamily="@font/google_sans_bold"
+                        android:layout_alignParentRight="true"
+                        android:textAllCaps="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>

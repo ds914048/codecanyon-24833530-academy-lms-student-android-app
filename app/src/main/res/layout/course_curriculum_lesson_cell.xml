@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:paddingVertical="10dp"
+    android:paddingLeft="20dp">
+    <LinearLayout
+        android:id="@+id/lessonIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp">
+        <ImageView
+            android:id="@+id/videoIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/play_icon"
+            android:layout_marginTop="1dp"
+            android:visibility="gone"
+            android:scaleType="fitCenter"/>
+        <ImageView
+            android:id="@+id/quizIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/quiz_icon"
+            android:scaleType="fitCenter"
+            android:visibility="gone"/>
+        <ImageView
+            android:id="@+id/attachmentIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/attachment_icon"
+            android:scaleType="fitCenter"
+            android:visibility="gone"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/courseCurriculumLessonCellTitlte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/lessonIcon"
+        android:layout_centerVertical="true"
+        android:textSize="16dp"
+        android:fontFamily="@font/google_sans_regular"
+        android:text="You will be able to illustrate your cv"
+        android:ellipsize="end"
+        android:textColor="#5594BE"/>
+</RelativeLayout>

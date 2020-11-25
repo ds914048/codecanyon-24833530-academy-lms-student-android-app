@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.floatingactionbutton.FloatingActionButton xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/floatingFilterButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:layout_above="@id/bottomNavigationView"
+    android:layout_alignParentRight="true"
+    android:layout_marginRight="25dp"
+    android:layout_marginBottom="25dp"
+    android:backgroundTint="#273647"
+    android:elevation="6dp"
+    app:fabSize="normal"
+    app:borderWidth="0dp"
+    android:src="@drawable/filter"
+    android:onClick="handleFilterButton">
+
+</com.google.android.material.floatingactionbutton.FloatingActionButton>

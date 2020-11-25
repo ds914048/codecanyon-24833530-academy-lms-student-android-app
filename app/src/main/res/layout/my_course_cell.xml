@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/top_course_card"
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+        app:cardCornerRadius="10dp"
+        android:layout_alignParentLeft="true"
+        app:cardPreventCornerOverlap="true"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_launcher_background"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/courseTitle"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="Lorem Ipsum Dolor Emmet Here You Go Dear"
+                android:layout_below="@id/image_view"
+                android:layout_centerHorizontal="true"
+                android:gravity="left"
+                android:textColor="#555F6A"
+                android:fontFamily="@font/google_sans_regular"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="17dp"
+                android:ellipsize="end"
+                android:maxLines="2"/>
+
+            <ProgressBar
+                android:id="@+id/courseCompletionProgressBar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_below="@id/courseTitle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="10dp"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="100"
+                android:progressDrawable="@drawable/custom_progress_bar"
+                android:theme="@style/progressBarSkyBlue" />
+
+            <TextView
+                android:id="@+id/courseCompletionNumericValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/courseCompletionProgressBar"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:textColor="#555F6A"
+                android:fontFamily="@font/google_sans_regular"
+                android:textSize="12dp"
+                android:maxLines="2"
+                android:text="70%completed"
+                android:layout_marginTop="3dp"/>
+
+            <RatingBar
+                android:id="@+id/myCourseRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/courseCompletionNumericValue"
+                style="?android:attr/ratingBarStyleSmall"
+                android:numStars="5"
+                android:stepSize="1.0"
+                android:isIndicator="true"
+                android:rating="4"
+                android:progressTint="#FFC107"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"/>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>

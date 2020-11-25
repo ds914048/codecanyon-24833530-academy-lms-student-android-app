@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Academy</string>
+    <string name="title_course">Course</string>
+    <string name="title_my_course">My Course</string>
+    <string name="title_wishlist">Wishlist</string>
+    <string name="title_account">Account</string>
+
+    <string-array name="lesson_options">
+        <item>Choose an option</item>
+        <item>Course Details</item>
+        <item>Share This Course</item>
+    </string-array>
+
+    <string name="title_activity_progress_bar">ProgressBar</string>
+    <string name="title_activity_lesson">LessonActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_quiz">QuizActivity</string>
+</resources>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/top_course_card"
+        android:layout_width="200dp"
+        android:layout_height="230dp"
+        app:cardCornerRadius="10dp"
+        android:layout_alignParentLeft="true"
+        app:cardPreventCornerOverlap="true"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_launcher_background"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="Lorem Ipsum Dolor Emmet Here You Go Dear"
+                android:layout_below="@id/image_view"
+                android:layout_centerHorizontal="true"
+                android:gravity="left"
+                android:textColor="#555F6A"
+                android:fontFamily="@font/google_sans_regular"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="17dp"
+                android:ellipsize="end"
+                android:maxLines="2"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:layout_below="@id/name"
+                android:layout_marginHorizontal="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <RatingBar
+                        android:id="@+id/topCourseRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:numStars="5"
+                        android:stepSize="1.0"
+                        android:isIndicator="true"
+                        android:rating="4"
+                        android:progressTint="#FFC107"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:id="@+id/topCoursePrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$55555"
+                        android:textColor="#9AACAA"
+                        android:autoSizeTextType="uniform"
+                        android:textSize="13dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/google_sans_regular"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>

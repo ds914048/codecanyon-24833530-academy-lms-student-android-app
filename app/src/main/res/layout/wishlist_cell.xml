@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/top_course_card"
+        android:layout_width="200dp"
+        android:layout_height="240dp"
+        app:cardCornerRadius="10dp"
+        android:layout_alignParentLeft="true"
+        app:cardPreventCornerOverlap="true"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_launcher_background"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/courseTitle"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="Lorem Ipsum Dolor Emmet Here You Go Dear"
+                android:layout_below="@id/image_view"
+                android:layout_centerHorizontal="true"
+                android:gravity="left"
+                android:textColor="#555F6A"
+                android:fontFamily="@font/google_sans_regular"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="17dp"
+                android:ellipsize="end"
+                android:maxLines="2"/>
+
+            <Spinner
+                android:id="@+id/moreButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/courseTitle"
+                android:layout_centerHorizontal="true"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="10dp"
+                style="@style/horizontalMoreButton"/>
+
+            <ImageButton
+                android:id="@+id/toggleWishList"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@null"
+                android:src="@drawable/icon_more_horizontal"
+                android:layout_below="@id/courseTitle"
+                android:layout_centerHorizontal="true"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>
